@@ -17,7 +17,6 @@ class ViewPagerAdapter<T>(private val bannerController: BannerController<T>, pri
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val pageView = getPageView(container, position)
         container.addView(pageView)
-        Log.d("ywd", "container:" + container.javaClass)
         return pageView
     }
 
@@ -30,9 +29,6 @@ class ViewPagerAdapter<T>(private val bannerController: BannerController<T>, pri
     override fun isViewFromObject(view: View?, `object`: Any?): Boolean = view === `object`
 
     override fun getCount(): Int {
-        var count: Int = 0
-        Log.d("ywd", "size:" + mData.size)
-        LogUtil.d("ywd", "" + count++)
         return mData.size
     }
 

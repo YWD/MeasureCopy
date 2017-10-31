@@ -46,6 +46,7 @@ class Banner(context: Context, attrs: AttributeSet?) : RelativeLayout(context, a
         viewPager.adapter = ViewPagerAdapter(bannerController, data)
         setIndicator(data.size, R.drawable.banner_indicator_bg)
         viewPager.startTurning()
+        indicatePage(0)
         viewPager.addOnPageChangeListener(this)
     }
 
@@ -60,9 +61,9 @@ class Banner(context: Context, attrs: AttributeSet?) : RelativeLayout(context, a
 //            imageView.background = resources.getDrawable(res)
             imageView.setImageResource(res)
 //            imageView.isActivated = true
-            if (i == count - 1) {
-                imageView.isActivated = true
-            }
+//            if (i == count - 1) {
+//                imageView.isActivated = true
+//            }
             indicatorContainer.addView(imageView)
         }
     }
