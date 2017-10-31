@@ -2,6 +2,8 @@ package com.up.measurecopy.main.net
 
 import com.up.measurecopy.model.HomeConfig
 import com.up.measurecopy.model.Response
+import io.reactivex.Observable
+import io.reactivex.Observer
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -19,5 +21,7 @@ class NetApi {
         fun <T> getHomeConfig(@Query("timestamp") timestamp: Long?, @Query("sign") sign: String): Call<Response<T>>*/
         @GET("config/")
         fun getHomeConfig(@Query("timestamp") timestamp: Long?, @Query("sign") sign: String): Call<Response<HomeConfig>>
+        @GET("config/")
+        fun getHomeConfigR(@Query("timestamp") timestamp: Long?, @Query("sign") sign: String): Observable<Response<HomeConfig>>
     }
 }
