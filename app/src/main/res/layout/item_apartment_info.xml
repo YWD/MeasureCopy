@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/apartmentPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="龙东大道3000-8号楼  五室两厅"
+            android:textColor="@color/text_color_black" />
+
+        <TextView
+            android:id="@+id/apartmentCreateInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="杨  2017-11-02"
+            android:textColor="@color/text_color_gray"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/right1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_zhankai" />
+
+    <ImageView
+        android:id="@+id/right2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/right1"
+        android:src="@drawable/icon_tongbu_pre" />
+
+    <View
+        android:background="@color/divider"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/right2"
+        android:layout_marginRight="7dp"
+        android:layout_marginLeft="7dp"
+        android:id="@+id/right3"
+        android:layout_width="1dp"
+        android:layout_height="20dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/right4"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_xiugai"
+        android:layout_toLeftOf="@id/right3"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

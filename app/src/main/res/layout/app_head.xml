@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/head_left_iv1"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginLeft="10dp"
         android:src="@drawable/icon_gengduo"
@@ -16,8 +16,8 @@
 
     <ImageView
         android:id="@+id/head_left_iv2"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@id/head_left_iv1"
@@ -28,13 +28,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/head_title"
+        android:textSize="17sp"
+        android:textColor="@color/text_color_black"
         android:layout_centerInParent="true"
         android:text="@string/app_name" />
 
     <ImageView
         android:id="@+id/head_right_iv1"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
@@ -44,8 +46,8 @@
 
     <ImageView
         android:id="@+id/head_right_iv2"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginRight="5dp"
         android:layout_toLeftOf="@id/head_right_iv1"

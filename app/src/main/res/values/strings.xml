@@ -2,4 +2,6 @@
     <string name="app_name">MeasureCopy</string>
     <string name="left">左</string>
     <string name="divide_text">divide text</string>
+    <string name="create">创建户型</string>
+    <string name="schedule">我的行程</string>
 </resources>

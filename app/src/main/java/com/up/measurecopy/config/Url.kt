@@ -6,7 +6,12 @@ package com.up.measurecopy.config
  */
 object Url {
 
-    // 编译器常量
-    const val BASE_URL = "http://192.168.3.108:8001/measure/open/"
-
+    // base url
+    const val BASE_URL = "http://3d.fuwo.com/measure/open/"
+    // App配置接口
+    const val APP_CONFIG = "config/"
+    // 户型列表数据
+    const val APARTMENTS = "mhouselayout/list/new/"
+    // 用户登录接口
+    const val LOGIN = "accountapi/new-login/"
 }

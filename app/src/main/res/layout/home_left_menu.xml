@@ -4,14 +4,65 @@
     android:id="@+id/leftMenu"
     android:layout_width="200dp"
     android:layout_height="wrap_content"
+    android:background="@color/white"
     android:layout_gravity="start"
-    android:background="@color/green"
     android:orientation="vertical"
     tools:showIn="@layout/activity_home">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/left" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/bg_touxiang"
+        android:orientation="horizontal"
+        android:paddingTop="55dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="30dp"
+            android:gravity="center">
+
+            <com.up.measurecopy.component.CircleImageView
+                android:id="@+id/userAvatar"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/information_pic" />
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/avatar_ring" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="昵称"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/user_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="上海  浦东新区"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

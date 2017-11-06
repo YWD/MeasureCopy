@@ -1,12 +1,9 @@
 package com.up.measurecopy.delete.adapter
 
-import android.content.Context
 import android.support.v4.view.PagerAdapter
-import android.util.Log
 import android.view.View
 import android.view.ViewGroup
-import com.up.measurecopy.util.LogUtil
-import com.up.measurecopy.view.banner.BannerController
+import com.up.measurecopy.component.banner.BannerController
 
 /**
  * Created by ywd on 2017/10/27.
@@ -28,9 +25,7 @@ class ViewPagerAdapter<T>(private val bannerController: BannerController<T>, pri
 
     override fun isViewFromObject(view: View?, `object`: Any?): Boolean = view === `object`
 
-    override fun getCount(): Int {
-        return mData.size
-    }
+    override fun getCount(): Int = mData.size
 
     override fun finishUpdate(container: ViewGroup?) {
         super.finishUpdate(container)

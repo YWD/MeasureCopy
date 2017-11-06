@@ -6,4 +6,9 @@
     <color name="green">#00FF00</color>
     <color name="red">#F00</color>
     <color name="white">#FFF</color>
+    <color name="divider">#E5E5E5</color>
+    <color name="text_color_gray">#666666</color>
+    <color name="text_color_black">#333333</color>
+    <color name="circle_draw">#66cccccc</color>
+    <color name="black">#000000</color>
 </resources>
