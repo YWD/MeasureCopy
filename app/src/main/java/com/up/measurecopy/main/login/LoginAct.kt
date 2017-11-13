@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.up.measurecopy.R
-import com.up.measurecopy.manager.PreferenceManager
 import com.up.measurecopy.manager.UserManager
 import com.up.measurecopy.model.Response
 import com.up.measurecopy.model.User

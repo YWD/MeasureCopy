@@ -2,15 +2,9 @@ package com.up.measurecopy.component.drawview
 
 import android.content.Context
 import android.graphics.Canvas
-import android.graphics.Paint
 import android.graphics.Point
-import android.graphics.PointF
 import android.util.AttributeSet
-import android.view.MotionEvent
 import android.view.View
-import com.up.measurecopy.R
-import com.up.measurecopy.config.AppConstants
-import com.up.measurecopy.util.LogUtil
 
 /**
  * Created by ywd on 2017/11/4.
@@ -18,7 +12,9 @@ import com.up.measurecopy.util.LogUtil
  */
 class DrawView : View {
 
-    var activePoint: Point? = null
+    var hasActivePoint: Boolean = true
+    var activePoint: Point = Point(0,0)
+    var isTouched: Boolean = false
     val points: MutableList<Point> = ArrayList()
     private val drawHelper = DrawHelper(context)
 
@@ -32,16 +28,24 @@ class DrawView : View {
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
 
-        drawHelper.drawActivePoint(canvas!!, activePoint)
-        drawHelper.drawLine(canvas, points)
+        if (hasActivePoint) {
+            if (activePoint == Point(0,0)) {
+                activePoint = Point(measuredWidth / 2, measuredHeight / 2)
+                points.add(activePoint)
+            }
+            drawHelper.drawActivePoint(canvas!!, activePoint)
+        }
+
+        points.add(activePoint)
+        drawHelper.drawLine(canvas!!, points)
+        points.remove(activePoint)
 
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
-        LogUtil.d("ywd", "widthMeasureSpec:" +measuredWidth)
-        LogUtil.d("ywd", "widthMeasureSpec:" +measuredHeight)
     }
+
 }
 
 

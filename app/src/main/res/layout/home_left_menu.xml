@@ -65,4 +65,10 @@
         </LinearLayout>
     </LinearLayout>
 
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/inputText"
+        android:inputType="text"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

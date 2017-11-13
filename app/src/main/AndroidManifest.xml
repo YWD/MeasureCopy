@@ -25,7 +25,7 @@
         -->
 
         <activity
-            android:name=".main.home.HomeActivity"
+            android:name=".main.WelcomeAct"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -34,6 +34,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".main.home.HomeActivity" />
         <activity android:name=".main.apartment.ApartmentListAct" />
         <activity android:name=".main.login.LoginAct" />
         <activity android:name=".main.sketch.SketchAct"/>

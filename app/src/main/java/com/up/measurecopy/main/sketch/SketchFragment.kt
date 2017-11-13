@@ -26,16 +26,14 @@ class SketchFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        val drawView = contentView?.findViewById(R.id.drawView) as DrawView
+        drawView.hasActivePoint = true
+        drawView.setOnTouchListener(DrawTouchListener(drawView))
     }
 
     override fun onResume() {
         super.onResume()
 
-        val drawView = contentView?.findViewById(R.id.drawView) as DrawView
-        val measuredWidth = drawView.measuredWidth
-        LogUtil.d("ywd", "measuredWidth:" + measuredWidth)
-        drawView.activePoint = Point((measuredWidth / 2), (drawView.measuredHeight / 2))
-        drawView.invalidate()
-        drawView.setOnTouchListener(DrawTouchListener(drawView))
     }
 }

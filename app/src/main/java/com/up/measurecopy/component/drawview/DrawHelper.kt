@@ -34,10 +34,14 @@ class DrawHelper(val context: Context) {
     }
 
     fun drawLine(canvas: Canvas, points: List<Point>) {
+        if (points.size < 2) {
+            return
+        }
         val path = Path()
+        val point = points[0]
+        path.moveTo(point.x.toFloat(), point.y.toFloat())
         for ((x, y) in points) {
             path.lineTo(x.toFloat(), y.toFloat())
-            LogUtil.d("ywd","" + x + ":" + y)
         }
         paint.color = resources.getColor(R.color.black)
         canvas.drawPath(path, paint)

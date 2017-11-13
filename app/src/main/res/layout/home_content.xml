@@ -25,21 +25,21 @@
                 android:weightSum="3">
 
                 <TextView
-                    android:padding="5dp"
-                    android:layout_width="0dp"
                     android:id="@+id/createApartment"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/bg_right_divider"
                     android:drawablePadding="6dp"
                     android:drawableTop="@drawable/icon_chuangjianhuxing"
                     android:gravity="center"
+                    android:padding="5dp"
                     android:text="@string/create"
                     android:textColor="@color/text_color_gray"
                     android:textSize="13sp" />
 
                 <TextView
-                    android:padding="5dp"
+                    android:id="@+id/mySchedules"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -47,20 +47,22 @@
                     android:drawablePadding="6dp"
                     android:drawableTop="@drawable/icon_wodexingcheng"
                     android:gravity="center"
+                    android:padding="5dp"
                     android:text="@string/schedule"
                     android:textColor="@color/text_color_gray"
                     android:textSize="13sp" />
 
                 <TextView
-                    android:padding="5dp"
                     android:layout_width="0dp"
+                    android:id="@+id/myQuotation"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:drawablePadding="6dp"
                     android:background="@color/white"
+                    android:drawablePadding="6dp"
                     android:drawableTop="@drawable/icon_wodebaojia"
                     android:gravity="center"
-                    android:text="@string/create"
+                    android:padding="5dp"
+                    android:text="@string/quotation"
                     android:textColor="@color/text_color_gray"
                     android:textSize="13sp" />
 
@@ -72,22 +74,22 @@
 
                 <TextView
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:text="我的户型"
-                    android:textSize="17sp"
-                    android:textColor="@color/text_color_black"
                     android:layout_marginLeft="15dp"
-                    android:layout_height="wrap_content" />
+                    android:text="我的户型"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/allApartment"
                     android:layout_width="wrap_content"
-                    android:text="查看全部户型"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:drawableRight="@drawable/icon_zhankai"
                     android:layout_marginRight="15dp"
-                    android:layout_height="wrap_content" />
+                    android:drawableRight="@drawable/icon_zhankai"
+                    android:text="查看全部户型" />
             </RelativeLayout>
 
         </LinearLayout>
